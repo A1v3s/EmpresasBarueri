@@ -1,0 +1,52 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+\begin{center}
+
+  {\LARGE FUNDAÇÃO GETULIO VARGAS}\\
+  \vspace{7cm}
+
+  {\large\textbf{{ANALISE EXPLORATÓRIA DE DADOS E VISUALIZAÇÃO}}}\\
+  \vspace{2cm}
+
+  {\large {LUIS ANTONIO ALVES}\\}
+
+  \vspace{9,5cm}
+  {\large {Rio de Janeiro - RJ}}\\
+  \vspace{0.15cm}
+  {\large {Abril 2021}}
+  %\vspace{0.15cm}
+\end{center}
+
+\thispagestyle{empty}
+
+\newpage
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(dplyr) 
+```
+\begin{center}
+
+  {\large\textbf{{HISTÓRICO DOS DADOS, ORIGEM E MÉTODOS APLICADOS}}}\\
+  \vspace{3cm}
+  
+\end{center}
+
+
+  Escolhi os dados abertos da  \href{https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj}{Receita Federal}, onde a base está disponível.
+  Feita uma analise prévia e faço um relato das minhas conclusão: \  
+  
+  1) No momento que fiz o acesso as base a era composta por 20 arquivos com tamanho variando o tamanho entre 234,285 kb e 396.120 kb (sempre compactados).\    Após descompactar o primeiro arquivo veio com o nome (K3241.K03200DV.D00703.L00001), com o tamanho de 5.287.555 kb e tipo texto com 4.508.291 linhas e 1.200 posições de largura e não existe cabeçalho.\    Não contendo separação por espaços ou caracteres, mas no site também está disponivel um arquivo LAYOUT_DADOS_ABERTOS_CNPJ.pdf, que contem descriçôes de toda estrutura do arquivo. \     
+  
+  2) 
+  Restringir os dados a cidade de Barueri, município da Região Metropolitana de São Paulo, no estado de São Paulo.
+  
+
+\newpage
+
+
