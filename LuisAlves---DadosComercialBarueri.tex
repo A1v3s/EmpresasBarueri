@@ -1,0 +1,121 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\begin{center}
+
+  {\LARGE FUNDAÇÃO GETULIO VARGAS}\\
+  \vspace{7cm}
+
+  {\large\textbf{{ANALISE EXPLORATÓRIA DE DADOS E VISUALIZAÇÃO}}}\\
+  \vspace{2cm}
+
+  {\large {LUIS ANTONIO ALVES}\\}
+
+  \vspace{9,5cm}
+  {\large {Rio de Janeiro - RJ}}\\
+  \vspace{0.15cm}
+  {\large {Abril 2021}}
+  %\vspace{0.15cm}
+\end{center}
+
+\thispagestyle{empty}
+
+\newpage
+
+\begin{center}
+
+  {\large\textcolor{blue}\textbf{{HISTÓRICO DOS DADOS, ORIGEM E MÉTODOS APLICADOS}}}\\
+  \vspace{3cm} 
+
+\end{center}
+
+Escolhi os dados abertos da
+\href{https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj}{Receita Federal},
+onde a base está disponível. Feita uma analise prévia e faço um relato
+das minhas conclusão: ~
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  No momento que fiz o acesso as base a era composta por 20 arquivos com
+  tamanho variando o tamanho entre 234,285 kb e 396.120 kb (sempre
+  compactados).~ Após descompactar o primeiro arquivo veio com o nome
+  (K3241.K03200DV.D00703.L00001), com o tamanho de 5.287.555 kb e tipo
+  texto com 4.508.291 linhas e 1.200 posições de largura e não existe
+  cabeçalho.~ Não contendo separação por espaços ou caracteres, mas no
+  site também está disponivel um arquivo
+  LAYOUT\_DADOS\_ABERTOS\_CNPJ.pdf, que contem descriçôes de toda
+  estrutura do arquivo. ~
+\item
+  Restringir os dados a cidade de Barueri, município da Região
+  Metropolitana de São Paulo, no estado de São Paulo.
+\end{enumerate}
+
+\newpage
+
+\end{document}
